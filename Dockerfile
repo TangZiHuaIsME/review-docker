@@ -1,8 +1,7 @@
-FROM node:20-alpine
+FROM python:3.10-slim
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --production
-COPY . .
-RUN chmod +x wait-for-it.sh
-EXPOSE 3000
-CMD ["./wait-for-it.sh","db:5432","--","npm","start"]
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py .
+EXPOSE 5000
+CMD ["python","app.py"]
