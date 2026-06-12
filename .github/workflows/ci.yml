@@ -36,7 +36,7 @@ jobs:
           push: true                    # 构建完直接推送
           tags: |
             ${{ env.DOCKERHUB_REPO }}:latest
-            ${{ env.DOCKERHUB_REPO }}:${{ github.sha }}  # 用commit SHA做标签
+            ${{ env.DOCKERHUB_REPO }}:${{ github.sha }}
       
       # 第4步：验证（可选）
       - name: Verify pushed image
