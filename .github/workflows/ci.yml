@@ -40,5 +40,5 @@ jobs:
       
       # 第4步：验证（可选）
       - name: Verify pushed image
-         run: |
+        run: |
            echo "镜像已推送: ${{ env.DOCKERHUB_REPO }}:${{ github.sha }}"
