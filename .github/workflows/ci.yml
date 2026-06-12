@@ -9,7 +9,7 @@ on:
 
 # 定义环境变量（整个workflow都能用）
 env:
-  DOCKERHUB_REPO: 你的DockerHub用户名/devops-flask  # 改成你的
+  DOCKERHUB_REPO: tangzihua/devops-flask  # 改成你的
 
 # 具体任务
 jobs:
